@@ -3,8 +3,7 @@ import time
 
 import requests
 
-url = os.environ.get("PINGER")
-if url:
+if url := os.environ.get("PINGER"):
     if url.endswith("/"):
         url = url[:-1]
     while True:
